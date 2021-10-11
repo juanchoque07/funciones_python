@@ -12,6 +12,18 @@ import random
 
 # --------------------------------
 # Aquí dentro definir la función lista_aleatoria
+def lista_aleatoria(inicio,fin, cantidad):
+    
+    lista_nueva =[]
+    x = 0
+    while x < cantidad :    
+        numero = random.randrange(inicio, fin+1)
+        x += 1
+        lista_nueva.append(numero)
+    
+    
+    return lista_nueva
+        
 
 
 # --------------------------------
@@ -19,18 +31,20 @@ import random
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    
+
     inicio = 0
     fin = 10
     cantidad = 5
-
+    
+    lista_final = lista_aleatoria(inicio,fin,cantidad)
+    
     # Alumno: Crear la función "lista_aleatoria"
 
     # Para este ejercicio utilizaremos el módulo random
     # Ejemplo de como obtener un numero aleatorio
     # entre inicio y fin
     # inicio <= numero <= fin
-    numero = random.randrange(inicio, fin+1)
+"""numero = random.randrange(inicio, fin+1)"""
     # Documentación oficial de random
     # https://docs.python.org/3.7/library/random.html
     # Ante cualquier duda preguntar en el campus!
@@ -49,9 +63,9 @@ if __name__ == '__main__':
     # Cada valor generado lo debe guardar en una lista, recuerde:
     # 1) Iniciar y crear esa lista vacia.
     # 2) Para agregar nuevos elementos en la lista utiliza "append"
-
+    
     # Finalmente dicha función debe retornar la lista de elementos random generados.
-
+    
     # Luego de crear la función invocarla en este lugar:
 
     # mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
@@ -61,4 +75,5 @@ if __name__ == '__main__':
 
     # print(mi_lista_aleatoria)
 
-    print("terminamos")
+print("Mi lista aleatoria es :", lista_final)
+print("terminamos")
