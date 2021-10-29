@@ -13,13 +13,13 @@ def promedio(numeros):
     suma_numeros = sum(numeros)
     cant_num = len(numeros)
     
-    if cant_num == 0:
-        print("Lista Vacia")
-        resultado = 0
+    if cant_num != 0:
+        media = suma_numeros/cant_num
     else:
+        print("Lista Vacia")
+        media = 0
         pass
 
-    media = suma_numeros/cant_num
     print("Funcion promedio da :", media)
 
     resultado = media
